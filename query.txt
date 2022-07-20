@@ -1,0 +1,65 @@
+mutation {
+  addDisease(diseaseName:"decaying", productId:1){
+    diseaseName
+    productId
+  }
+}
+
+
+mutation {
+  addProduct(title: "Urea",price:325,count:6) {
+    title
+    price
+    count
+  }
+}
+
+
+
+{
+  products{
+    title
+    price
+    count
+  }
+}
+
+
+{
+  diseases{
+    diseaseName
+    productId
+  }
+}
+
+
+{
+  product(id:"62d6955466657e78aaca47f2"){
+    title
+    price
+    count
+    disease{
+      diseaseName
+    }
+     
+  }
+}
+
+{
+  diseases{
+    diseaseName
+   product{
+    title
+    price
+    count
+  }
+  }
+}
+
+
+mutation{
+  updateProduct(id:"62d6955466657e78aaca47f2", count:4,price:124){
+    count
+    id
+  }
+} 	
